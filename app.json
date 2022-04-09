@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "Agro-Market",
+    "slug": "agro-market",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./src/images/icon.png",
+    "splash": {
+      "backgroundColor": "#8257e5",
+      "image": "./src/images/splash.png",
+      "resizeMode": "cover"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/images/icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "web": {
+      "favicon": "./src/images/icon.png"
+    }
+  }
+}

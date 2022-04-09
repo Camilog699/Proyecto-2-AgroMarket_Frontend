@@ -3,13 +3,14 @@ import { FlatList, SafeAreaView } from 'react-native'
 import { RectButton } from 'react-native-gesture-handler'
 import { useNavigation } from '@react-navigation/native'
 import { Feather } from '@expo/vector-icons'
-import ProductoItem from './ProductoItem'
-import { ProductosContext } from '../../contexts'
+import MetodoPagoItem from './metodoPagoItem/index'
+// import { ProductosContext } from '../../contexts'
+import { metodosContext } from '../../contexts/metodos/index'
 import styles from './styles'
 
 const Start = () => {
   const { navigate } = useNavigation()
-  const { productos, destroyProducto } = useContext(ProductosContext)
+  const { productos, destroyProducto } = useContext(metodosContext)
 
   return (
     <SafeAreaView style={styles.startScreen}>
@@ -21,7 +22,7 @@ const Start = () => {
         data={productos}
         keyExtractor={(item) => String(item.id)}
         renderItem={({ item }) => (
-          <ProductoItem
+          <MetodoPagoItem
             producto={item}
             onDelete={() => destroyProducto(item.id)}
             onPress={() => navigate('Form', item.id)}

@@ -1,12 +1,15 @@
 import React from 'react'
-import { ProductosProvider } from './productos'
-
-export { ProductosContext } from './productos'
+// import { ProductosProvider } from './productos'
+import { MetodosPagoProvider } from './metodos'
+// export { ProductosContext } from './productos'
+export { MetotodosPagoContext } from './metodos'
 
 const ContextProvider = ({ children }) => (
-  <ProductosProvider>
+
+  <MetodosPagoProvider>
     {children}
-  </ProductosProvider>
+  </MetodosPagoProvider>
+
 )
 
 export default ContextProvider

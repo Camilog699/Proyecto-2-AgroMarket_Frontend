@@ -16,3 +16,6 @@ Make sure to have **Node.js 10+** installed in your machine and its **npm** avai
 $ npm install yet  # download all dependencies
 $ npm start     # run development server
 ```
+
+## Video DEMO 
+https://drive.google.com/file/d/1UhN-Nh7p9nNZEbzr4_9lMHPPIPfJXQ8P/view?usp=sharing

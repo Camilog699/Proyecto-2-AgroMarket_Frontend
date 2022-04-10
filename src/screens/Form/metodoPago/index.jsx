@@ -1,25 +1,26 @@
+/* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import { SafeAreaView, ScrollView, View } from 'react-native'
 import { BorderlessButton, RectButton } from 'react-native-gesture-handler'
 import { useNavigation, useRoute } from '@react-navigation/native'
 import { Feather } from '@expo/vector-icons'
-import { metodosContext } from '../../contexts/metodos/index'
-import TextInput from '../Form/TextInput/index'
+import { MetotodosPagoContext } from '../../../contexts'
+import TextInput from '../TextInput'
 import styles from './styles'
 
 const Form = () => {
   const bodyTextInput = useRef()
-  const metodoPagoId = useRoute().params
+  const metodoId = useRoute().params
   const { goBack } = useNavigation()
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
-  const { metodos, createMetodoPago, updateMetodoPago } = useContext(metodosContext)
+  const { metodos, createMetodoPago, updateMetodoPago } = useContext(MetotodosPagoContext)
   const [img, setImg] = useState('')
 
   const handleSaveProducto = () => {
-    const metodo = { id: metodoPagoId, title, body, img }
+    const metodo = { id: metodoId, title, body, img }
 
-    if (metodoPagoId) {
+    if (metodoId) {
       updateMetodoPago(metodo)
     } else {
       createMetodoPago(metodo)
@@ -28,13 +29,13 @@ const Form = () => {
   }
 
   useEffect(() => {
-    if (metodoPagoId) {
-      const { body, title } = metodos.find(({ id }) => metodoPagoId === id) // eslint-disable-line no-shadow
+    if (metodoId) {
+      const { body, title } = metodos.find(({ id }) => metodoId === id) // eslint-disable-line no-shadow
 
       setTitle(title)
       setBody(body)
     }
-  }, [metodoPagoId])
+  }, [metodoId])
 
   return (
     <SafeAreaView style={styles.formScreen}>
@@ -54,7 +55,7 @@ const Form = () => {
         onSubmitEditing={() => bodyTextInput.current.focus()}
         onChangeText={setTitle}
         value={title}
-        autoFocus={!metodoPagoId}
+        autoFocus={!metodoId}
         blurOnSubmit={false}
       />
       <View style={styles.separator} />

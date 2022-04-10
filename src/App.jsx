@@ -1,6 +1,6 @@
 import React from 'react'
 import Routes from './routes'
-import ContextProvider from './contexts/index'
+import ContextProvider from './contexts'
 
 const App = () => (
   <ContextProvider>

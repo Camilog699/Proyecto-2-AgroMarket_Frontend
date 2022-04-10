@@ -1,5 +1,7 @@
+/* eslint-disable react-native/no-color-literals */
+/* eslint-disable react-native/sort-styles */
 import { StyleSheet } from 'react-native'
-import theme from '../../theme'
+import theme from '../../../theme'
 
 export default StyleSheet.create({
   formScreen: {

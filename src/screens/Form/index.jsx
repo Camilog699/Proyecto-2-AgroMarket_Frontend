@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import { SafeAreaView, ScrollView, View } from 'react-native'
 import { BorderlessButton, RectButton } from 'react-native-gesture-handler'

@@ -1,3 +1,10 @@
+/* eslint-disable object-curly-newline */
+/* eslint-disable max-len */
+/* eslint-disable semi-style */
+/* eslint-disable semi */
+/* eslint-disable react-native/no-unused-styles */
+/* eslint-disable react-native/sort-styles */
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import { Text, TouchableNativeFeedback, View, Image, StyleSheet } from 'react-native'
 import { RectButton, Swipeable } from 'react-native-gesture-handler'
@@ -22,7 +29,7 @@ const style = StyleSheet.create({
 
 const rippleEffect = TouchableNativeFeedback.Ripple(null, false)
 
-const MetodoPagoItem = ({ metodoPago, onDelete, onPress }) => {
+const MetodoPagoItem = ({ producto, onDelete, onPress }) => {
   const SwipeAction = () => (
     <RectButton style={styles.action} onPress={onDelete}>
       <Feather name="trash-2" size={26} color="white" />
@@ -46,9 +53,9 @@ const MetodoPagoItem = ({ metodoPago, onDelete, onPress }) => {
               uri: metodoPago.img
             }}
           /> */}
-          <Text style={styles.itemTitle}>{metodoPago.title}</Text>
+          <Text style={styles.itemTitle}>{producto.title}</Text>
           <Text style={styles.itemDate}>
-            Editado en la fecha {metodoPago.modifiedAt.getDate()}/{metodoPago.modifiedAt.getMonth() + 1}/{metodoPago.modifiedAt.getFullYear()}  Hora: {metodoPago.modifiedAt.getHours()}:{metodoPago.modifiedAt.getMinutes()}
+            Editado en la fecha {producto.modifiedAt.getDate()}/{producto.modifiedAt.getMonth() + 1}/{producto.modifiedAt.getFullYear()}  Hora: {producto.modifiedAt.getHours()}:{producto.modifiedAt.getMinutes()}
           </Text>
         </View>
 

@@ -1,8 +1,8 @@
 import { CREATE, UPDATE, DELETE } from './mutations'
 
 const actionsMap = {
-  createProducto: CREATE,
-  updateProducto: UPDATE,
+  createMetodoPago: CREATE,
+  updateMetodoPago: UPDATE,
   destroyProducto: DELETE,
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import Start from './screens/Start'
-import Form from './screens/Form'
+import Form from './screens/Form/metodoPago/index'
 
 const Stack = createStackNavigator()
 
@@ -13,7 +13,7 @@ const Routes = () => (
         name="Start"
         component={Start}
         options={{
-          title: 'SUS PRODUCTOS',
+          title: 'METODOS DE PAGO',
           headerTitleAlign: 'center',
         }}
       />
